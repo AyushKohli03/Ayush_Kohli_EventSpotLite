@@ -1,0 +1,97 @@
+/* src/App.css */
+
+/* Header styling */
+.header {
+  background-color: #4CAF50; /* Background color */
+  color: white; /* Text color */
+  text-align: center; /* Center text */
+  padding: 20px 0; /* Padding around the header */
+  font-family: 'Arial', sans-serif; /* Font family */
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack header and search */
+  align-items: center; /* Center content */
+}
+
+/* Search input styling */
+.search-container {
+  margin-top: 10px; /* Spacing above the search input */
+}
+
+.search-container input {
+  padding: 10px; /* Padding inside the input */
+  width: 300px; /* Width of the input */
+  border: 1px solid #ccc; /* Border styling */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+}
+
+/* Container for the event list */
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+  gap: 16px; /* Space between cards */
+  padding: 10px; /* Padding around the grid */
+}
+
+/* Styling for individual event cards */
+.event-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  background-color: #fff; /* Background color */
+}
+
+/* Hover effect for event cards */
+.event-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Ensure images are styled properly */
+.event-card img {
+  border-radius: 4px; /* Rounded corners for images */
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space below the image */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Hover effect on images */
+.event-card img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Text styling */
+.event-card h3 {
+  margin: 10px 0 5px; /* Spacing for headings */
+}
+
+.event-card p {
+  margin: 5px 0; /* Spacing for paragraphs */
+}
+
+/* Loading spinner */
+.loading-spinner {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .event-list {
+    grid-template-columns: 1fr; /* 1 column on very small screens */
+  }
+
+  .search-container input {
+    width: 100%; /* Full width on small screens */
+  }
+}
